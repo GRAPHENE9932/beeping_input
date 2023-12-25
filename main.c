@@ -21,7 +21,6 @@ void read_callback(struct SoundIoInStream* instream, int frame_count_min, int fr
             break;
         }
 
-        // printf("Frames: %d\n", frame_count);
         for (int frame = 0; frame < frame_count; frame++) {
             float* ptr = (float*)(areas[0].ptr + areas[0].step * frame);
             feed_sample(*ptr);
